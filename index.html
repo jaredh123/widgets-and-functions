@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/scripts.js"></script>
+	<title>Widgets and Functions</title>
+</head>
+<body>
+	<h1>Widgets and Functions</h1>
+	<h3>Background color is: <span class="colorName"></span></h3>
+	<button type="button" name="button" id="removeStyles">
+		Click to remove all CSS
+	</button>
+	<button type="button" name="button" id="returnStyles">
+		Click to return default CSS
+	</button>
+	<button type="button" name="button" id="backgroundColorChange">
+		Click to change background
+	</button>
+	<hr>
+
+	<div class="smallProject">
+		<h2>Pig Latin Translator</h2>
+		<form id="runPigLatin">
+			<h4>
+				Enter a word you'd like translated into pig latin &nbsp;
+				<span id="modalClickPigLatin">i</span>
+			</h4>
+			<div id="modalPigLatin" class="modal">
+				<div class="modalContent">
+					<span class="modalClose">&times;</span>
+    			<p>
+						• In words beginning with consonants, all letters before the first vowel are placed at the end of the word.<br>
+						• The suffix "ay" is then added to the end.<br>
+						• Words beginning with vowels are left unchanged and "yay" is added to the end.
+					</p>
+				</div>
+			</div>
+			<input type="text" id="inputPigLatin" required>
+			<button type="submit" name="button">Submit</button>
+			<br>
+			<br>
+			<span id="resultPigLatin"></span>
+    </form>
+	</div>
+	<hr>
+
+	<div class="smallProject">
+		<h2>Galactic Age Calculator</h2>
+		<h4>
+			Enter your Earth birth date below
+			<span id="modalClickGalacticAgeCalculator">i</span>
+		</h4>
+		<div id="modalGalacticAgeCalculator" class="modal">
+			<div class="modalContent">
+				<span class="modalClose">&times;</span>
+				<p>
+					• The birth date on Earth is used to calculate your age in years.<br>
+					• It is then compared to the relative age in years on whichever planet you choose.<br>
+					• Yes, I still want to believe Pluto is a planet.
+				</p>
+			</div>
+		</div>
+    <form id="runGalacticAgeCalculator">
+			<label>Day:</label>
+      <input type="number" id="day" required></br>
+      <label>Month:</label>
+      <input type="number" id="month" required></br>
+      <label>Year:</label>
+      <input type="number" id="year" required></br>
+      <label>Celestial body:</label>
+      <select id="celestialBody" class="form">
+        <option value="0">--Select Option--</option>
+        <option value="1">Sun</option>
+        <option value="2">Mercury</option>
+        <option value="3">Venus</option>
+        <option value="4">Earth</option>
+        <option value="5">Mars</option>
+        <option value="6">Jupiter</option>
+        <option value="7">Saturn</option>
+        <option value="8">Uranus</option>
+        <option value="9">Neptune</option>
+        <option value="10">Pluto</option>
+      </select>
+
+		  <button type="submit" name="button">Submit</button>
+			<br>
+			<br>
+			<span id="resultGalacticAgeCalculator"></span>
+    </form>
+	</div>
+</body>
+</html>
