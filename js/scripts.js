@@ -5,9 +5,11 @@ $(document).ready(function() {
   returnStyles.style.float = "right";
 
   removeStyles.addEventListener("click", function() {
+    document.body.style.backgroundColor = "#FFFFFF";
     document.querySelectorAll('style,link[rel="stylesheet"]').forEach(item => item.remove());
-    colorName.textContent = "#000000";
+    colorName.textContent = "#FFFFFF";
     removeStyles.style.visibility = "hidden";
+    backgroundColorChange.style.visibility = "hidden";
     removeStyles.style.float = "right";
     returnStyles.style.float = "left";
     returnStyles.style.visibility = "visible";
@@ -28,7 +30,7 @@ $(document).ready(function() {
     for (let i = 0; i < 6; i++) {
       hexCode += hexValues[getRandomNumber()];
     }
-    console.log(hexCode);
+    console.log(`background-color: ${hexCode}`);
     document.body.style.backgroundColor = hexCode;
     colorName.textContent = hexCode;
   });
