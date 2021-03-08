@@ -37,11 +37,14 @@ $(document).ready(function() {
     return Math.floor(Math.random() * hexValues.length);
   }
 
-  const modalClose = document.getElementsByClassName("modalClose")[0];
+  const modalClosePigLatin = document.getElementsByClassName("modalClose")[0];
+  const modalCloseGalacticAgeCalculator = document.getElementsByClassName("modalClose")[1];
 
-  modalClose.addEventListener("click", function() {
-    modalGalacticAgeCalculator.style.display = "none";
+  modalClosePigLatin.addEventListener("click", function() {
     modalPigLatin.style.display = "none";
+  });
+  modalCloseGalacticAgeCalculator.addEventListener("click", function() {
+    modalGalacticAgeCalculator.style.display = "none";
   });
 
   window.addEventListener("click", function() {
